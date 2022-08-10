@@ -5,6 +5,7 @@
  # Dificultad: FÁCIL
  #
  # Enunciado: Dado un listado de números, encuentra el SEGUNDO más grande.
+
 import time  #  Importar la librería time.
 
 listado = []  # Declaración de la lista.
@@ -26,5 +27,14 @@ for i in range(len(listado)):  # Ordena la lista.
             pasavalor = listado[i]
             listado[i] = listado[j]
             listado[j] = pasavalor
+print(listado)
+prim = 0
+seg = 1
 
-print("El número buscado es ", listado[1])  # Muesetra la lista.
+while True:  # Bucle para comprobar que funciona con números repetidos.
+    if listado[prim] > listado[seg]:
+        print("El número buscado es ", listado[seg])  # Muestra el resultado.
+        break
+    else:
+        prim += 1 
+        seg += 1
